@@ -36,7 +36,6 @@ public class Voting {
             MemberVote memberVote = getMemberVote(scanner, voter);
             votes.add(new Vote(voter, memberVote));
         }
-        scanner.close();
         return new VotingResult(votes);
     }
 
@@ -46,9 +45,9 @@ public class Voting {
         vote = scanner.nextLine();
         do {
             switch (vote) {
-                case "z" -> memberVote = MemberVote.ZA;
-                case "p" -> memberVote = MemberVote.PRZECIW;
-                case "w" -> memberVote = MemberVote.WSTRZYMAL_SIE;
+                case "z" -> memberVote = MemberVote.FOR;
+                case "p" -> memberVote = MemberVote.AGAINST;
+                case "w" -> memberVote = MemberVote.ABSTAIN;
                 default -> {
                     System.err.println("Oddaj prawidłowy głos (p)ośle\n");
                     printVotingRules(voter);

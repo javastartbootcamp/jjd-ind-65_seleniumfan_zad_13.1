@@ -23,9 +23,9 @@ public class VotingResult {
         double voteAgainst = 0;
         double voteWithHeld = 0;
         for (Vote vote : list) {
-            if (vote.getVote().equals(MemberVote.ZA)) {
+            if (vote.getVote().equals(MemberVote.FOR)) {
                 voteFor++;
-            } else if (vote.getVote().equals(MemberVote.PRZECIW)) {
+            } else if (vote.getVote().equals(MemberVote.AGAINST)) {
                 voteAgainst++;
             } else {
                 voteWithHeld++;

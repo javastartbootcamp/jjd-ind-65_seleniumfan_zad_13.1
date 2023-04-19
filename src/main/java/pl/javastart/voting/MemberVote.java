@@ -1,9 +1,9 @@
 package pl.javastart.voting;
 
 public enum MemberVote {
-    ZA("ZA"),
-    PRZECIW("PRZECIW"),
-    WSTRZYMAL_SIE("WSTRZYMAŁ SIĘ");
+    FOR("ZA"),
+    AGAINST("PRZECIW"),
+    ABSTAIN("WSTRZYMAŁ SIĘ");
 
     private String name;
 
